@@ -1,0 +1,3 @@
+# Alfred configuration example
+provider: ollama
+autonomy: ask_external
