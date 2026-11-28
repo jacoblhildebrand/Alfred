@@ -64,6 +64,7 @@ class ToolCall:
     tool: str
     arguments: dict[str, Any]
     reason: str = ""                # model's stated rationale, shown in approvals
+    id: str = ""                    # provider-assigned call id; tool results echo it back
 
 
 @dataclass
@@ -98,6 +99,7 @@ class Message:
     role: str                       # "system" | "user" | "assistant" | "tool"
     content: str
     tool_calls: list[ToolCall] = field(default_factory=list)
+    tool_call_id: str | None = None  # set on role="tool" messages: which call this answers
 
 
 @dataclass

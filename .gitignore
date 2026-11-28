@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+alfred_state.json
+alfred_state.json.*
+.env
